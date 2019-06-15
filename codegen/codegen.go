@@ -7,10 +7,11 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/trungtin/graphql-codegen/config"
-	codegenTemplate "github.com/trungtin/graphql-codegen/template"
 	graphql "github.com/graph-gophers/graphql-go"
 	"github.com/graph-gophers/graphql-go/introspection"
+	"github.com/iancoleman/strcase"
+	"github.com/trungtin/graphql-codegen/config"
+	codegenTemplate "github.com/trungtin/graphql-codegen/template"
 )
 
 type typeConfig struct {
@@ -506,5 +507,7 @@ func (g *CodeGen) templateFuncMap() template.FuncMap {
 		"sub_template":       g.subTemplate,
 		"sprintf":            fmt.Sprintf,
 		"includes_string":    g.includesString,
+		"to_snake":           strcase.ToSnake,
+		"to_camel":           strcase.ToCamel,
 	}
 }
