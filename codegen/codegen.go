@@ -7,8 +7,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/Applifier/graphql-codegen/config"
-	codegenTemplate "github.com/Applifier/graphql-codegen/template"
+	"github.com/trungtin/graphql-codegen/config"
+	codegenTemplate "github.com/trungtin/graphql-codegen/template"
 	graphql "github.com/graph-gophers/graphql-go"
 	"github.com/graph-gophers/graphql-go/introspection"
 )

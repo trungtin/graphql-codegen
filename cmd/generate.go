@@ -4,9 +4,9 @@ import (
 	"io/ioutil"
 	"path"
 
-	"github.com/Applifier/graphql-codegen/codegen"
-	"github.com/Applifier/graphql-codegen/config"
 	"github.com/spf13/cobra"
+	"github.com/trungtin/graphql-codegen/codegen"
+	"github.com/trungtin/graphql-codegen/config"
 )
 
 func init() {

@@ -4,7 +4,7 @@ setup:
 .PHONY: setup
 
 generate:
-	go generate github.com/Applifier/graphql-codegen/template
+	go generate github.com/trungtin/graphql-codegen/template
 .PHONY: generate
 
 test: generate

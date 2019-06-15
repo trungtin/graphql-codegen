@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Applifier/graphql-codegen/config"
+	"github.com/trungtin/graphql-codegen/config"
 )
 
 const fixtureDir = "fixtures"

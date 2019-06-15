@@ -3,7 +3,7 @@ package codegen
 import (
 	"testing"
 
-	"github.com/Applifier/graphql-codegen/config"
+	"github.com/trungtin/graphql-codegen/config"
 )
 
 func RunTest(schema string, conf config.Config, expected map[string]string, t *testing.T) map[string]string {
