@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	graphql "github.com/neelance/graphql-go"
+	graphql "github.com/graph-gophers/graphql-go"
 )
 
 func TestHTTPSchema(t *testing.T) {
