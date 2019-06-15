@@ -241,7 +241,7 @@ func (g *CodeGen) generateType(tp *introspection.Type, conf config.Config) (code
 			"Kind":            tp.Kind(),
 			"PossibleTypes":   possibleTypes,
 			"EnumValues":      enumValues,
-			"TypeName":        name,
+			"TypeName":        strcase.ToCamel(name),
 			"TypeDescription": g.removeLineBreaks(g.returnString(tp.Description())),
 			"Config":          conf,
 			"Fields":          fields,
@@ -507,7 +507,5 @@ func (g *CodeGen) templateFuncMap() template.FuncMap {
 		"sub_template":       g.subTemplate,
 		"sprintf":            fmt.Sprintf,
 		"includes_string":    g.includesString,
-		"to_snake":           strcase.ToSnake,
-		"to_camel":           strcase.ToCamel,
 	}
 }
