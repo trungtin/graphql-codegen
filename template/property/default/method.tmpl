@@ -2,11 +2,11 @@
   {{range .}}{{.Name | capitalize}} {{.Type}}
   {{end}}
 }{{ end }}
-{{define "receiver"}}{{if is_entry . }}Resolver{{else}}{{.}}Resolver{{end}}{{end}}
+{{define "receiver"}}{{if is_entry . }}Resolver{{else}}{{capitalize .}}Resolver{{end}}{{end}}
 {{if eq .TypeKind "OBJECT"}}
 {{$hasArguments := gt (.MethodArguments | len) 0}}
 // {{capitalize .MethodName}} {{.MethodDescription}}
-func (r *{{template "receiver" capitalize .TypeName}}) {{capitalize .MethodName}}({{if $hasArguments}}{{template "arguments" .MethodArguments}}{{end}}) {{capitalize .MethodReturnType}} {
+func (r *{{template "receiver" .TypeName}}) {{capitalize .MethodName}}({{if $hasArguments}}{{template "arguments" .MethodArguments}}{{end}}) {{capitalize .MethodReturnType}} {
   {{if is_entry .TypeName}}return nil{{else}}return r.{{capitalize .TypeName}}.{{capitalize .MethodReturn}}{{end}}
 }
 {{end}}

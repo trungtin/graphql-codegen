@@ -9,8 +9,8 @@ import (
 
 	graphql "github.com/graph-gophers/graphql-go"
 	"github.com/graph-gophers/graphql-go/introspection"
-	"github.com/iancoleman/strcase"
 	"github.com/trungtin/graphql-codegen/config"
+	"github.com/trungtin/graphql-codegen/strcase"
 	codegenTemplate "github.com/trungtin/graphql-codegen/template"
 )
 
