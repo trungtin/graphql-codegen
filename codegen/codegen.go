@@ -469,7 +469,7 @@ func (g *CodeGen) capitalise(str string) string {
 	if strings.ToLower(str) == "id" {
 		return "ID"
 	}
-	return strings.ToUpper(string(str[0])) + str[1:]
+	return strcase.ToCamel(str)
 }
 
 func (g *CodeGen) unCapitalise(str string) string {
